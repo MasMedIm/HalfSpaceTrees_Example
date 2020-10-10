@@ -1,6 +1,6 @@
 # Half Space Trees implementation using Scikit-multiflow
 
-- Half-Space-Trees paper [Paper](https://www.ijcai.org/Proceedings/11/Papers/254.pdf)
+- Half-Space-Trees [Paper](https://www.ijcai.org/Proceedings/11/Papers/254.pdf)
 
 # Why Half Space Trees for anomaly detection ?
 
