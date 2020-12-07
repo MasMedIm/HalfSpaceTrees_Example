@@ -56,15 +56,14 @@ def format_dataset(dataset):
     for col in dataset.columns:
         if dataset[col].dtype == 'object':
             le = preprocessing.LabelEncoder()
-            dataset[col].fillna("None", inplace=True)
-            le.fit(list(dataset[col].astype(str).values))
-            dataset[col] = le.transform(list(dataset[col].astype(str).values))
+            dataset[col].fillna("Null", inplace=True)
+            dataset[col] = le.fit_transform(dataset[col])
         else:
-            dataset[col].fillna(-999, inplace=True)
+            dataset[col].fillna(0, inplace=True)
     return dataset
 ```
 
-Simulating a data stream
+Simulating a data stream with pd.read_csv with chunks
 
 ```PYTHON
 start = datetime.datetime.now()
